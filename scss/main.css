@@ -81,7 +81,7 @@ h2 {
   padding-left: 10px;
   padding-right: 10px;
   height: 50px;
-  width: 318px;
+  width: 300px;
   color: #666666;
 }
 
@@ -117,4 +117,5 @@ h2 {
   font-weight: 600;
   color: #FFFFFF;
   line-height: 38px;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

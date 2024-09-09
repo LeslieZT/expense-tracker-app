@@ -3,7 +3,8 @@ const amount = document.getElementById("amount");
 const date = document.getElementById("date");
 const description = document.getElementById("description");
 const submitbutton = document.querySelector(".btn-submit");
-
+const clearAmountButton = document.getElementById("clearAmount");
+const clearDescriptionButton = document.getElementById("clearDescription");
 class Expense {
   constructor(category, amount, date, description) {
     this.category = category;
@@ -36,3 +37,11 @@ submitbutton.addEventListener("click", (event) => {
     event.preventDefault();
     addExpense();
   });
+
+clearAmountButton.addEventListener("click", (event)=>{
+    amountValue = "";
+});
+
+clearDescriptionButton.addEventListener("click", (event)=>{
+    descriptionValue = "";
+})

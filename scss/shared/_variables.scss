@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 /* Colors */
 $color-primary: #559BE6;
 $color-secondary: #94C3F6;
 $color-light:#FFFFFF;
 $color-gray : #888888;
+$color-dark-gray: #666666;
+
+/* Fonts */
+$font-principal: Nunito;
+$font-secondary: Inter;
+$regular-size: 16px;
+$description-size: 13px;

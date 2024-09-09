@@ -1,20 +1,18 @@
-@import "../shared/_variables.scss";
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/* Colors */
+/* Fonts */
 body {
-  background-image: linear-gradient(
-    to bottom,
-    $color-primary,
-    $color-secondary
-  );
+  background-image: linear-gradient(to bottom, #559BE6, #94C3F6);
   background-attachment: fixed;
-  font-family: $font-principal;
-  font-size: $regular-size;
+  font-family: Nunito;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
 }
 
 .back_icon {
-  fill: $color-light;
+  fill: #FFFFFF;
   height: 28px;
   width: 28px;
   margin-top: 20px;
@@ -24,15 +22,15 @@ body {
 }
 
 h2 {
-  font-family: $font-secondary;
+  font-family: Inter;
   font-weight: 800;
   font-size: 24px;
   align-self: center;
-  color: $color-light;
+  color: #FFFFFF;
 }
 
 .options_icon {
-  fill: $color-light;
+  fill: #FFFFFF;
   height: 28px;
   width: 28px;
   margin-top: 20px;
@@ -42,7 +40,7 @@ h2 {
 }
 
 .add_expense_form {
-  background-color: $color-light;
+  background-color: #FFFFFF;
   border-radius: 24px;
   display: flex;
   justify-content: center;
@@ -54,45 +52,45 @@ h2 {
 
 .add_expense_form_options {
   align-self: center;
-  font-family: $font-secondary;
+  font-family: Inter;
   font-size: 12 px;
   font-weight: 500;
-  color: $color-dark-gray;
+  color: #666666;
 }
 
 #category_select {
-  border: solid 1px $color-gray;
+  border: solid 1px #888888;
   border-radius: 8px;
   height: 50px;
   width: 318px;
-  color: $color-dark-gray;
+  color: #666666;
   padding: 10px;
 }
 
 #amount {
-  border: solid 1px $color-gray;
+  border: solid 1px #888888;
   border-radius: 8px;
   height: 50px;
   width: 318px;
-  color: $color-dark-gray;
+  color: #666666;
 }
 
 #date {
-  border: solid 1px $color-gray;
+  border: solid 1px #888888;
   border-radius: 8px;
   padding-left: 10px;
   padding-right: 10px;
   height: 50px;
   width: 318px;
-  color: $color-dark-gray;
+  color: #666666;
 }
 
 #description {
-  border: solid 1px $color-gray;
+  border: solid 1px #888888;
   border-radius: 8px;
   height: 118px;
   width: 318px;
-  color: $color-dark-gray;
+  color: #666666;
 }
 
 .clear_option button {
@@ -102,5 +100,21 @@ h2 {
   background-color: transparent;
   right: 15%;
   top: -10px;
-  color: $color-primary;
+  color: #559BE6;
 }
+
+.btn-submit {
+  padding: 10px 20px 10px 20px;
+  gap: 10px;
+  border-radius: 20px;
+  border: none;
+  width: 318px;
+  height: 64px;
+  margin-bottom: 24px;
+  background-image: linear-gradient(to bottom, #559BE6, #94C3F6);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 38px;
+}/*# sourceMappingURL=main.css.map */

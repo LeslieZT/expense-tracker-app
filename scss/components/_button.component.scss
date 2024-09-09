@@ -1,0 +1,19 @@
+.btn-submit {
+    padding: 10px 20px 10px 20px;
+    gap: 10px;
+    border-radius: 20px;
+    border:none;
+    width: 318px;
+    height: 64px;
+    margin-bottom: 24px;
+    background-image: linear-gradient(
+      to bottom,
+      $color-primary,
+      $color-secondary
+    );
+    font-family: $font-secondary;
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-light;
+    line-height: 38px;
+    }

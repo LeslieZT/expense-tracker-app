@@ -132,4 +132,53 @@ h2 {
   color: #FFFFFF;
   line-height: 38px;
   cursor: pointer;
+}
+
+.confirmation_button {
+  height: 56px;
+  width: 164px;
+  background-color: #559BE6;
+  opacity: 50%;
+  color: #FFFFFF;
+  font-size: 18px;
+  border: none;
+  border-radius: 16px;
+  gap: 10px;
+  padding: 8px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.confirmation_button:hover {
+  opacity: 100%;
+}
+
+.confirmation_container {
+  background-color: #FFFFFF;
+  height: 191px;
+  width: 376px;
+  border-radius: 24px 24px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.confirmation_buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+#remove_question {
+  font-family: Inter;
+  font-size: 18px;
+}
+
+#remove_question_text {
+  font-family: Inter;
+  justify-content: center;
+  margin-left: 40px;
+  color: #666666;
 }/*# sourceMappingURL=main.css.map */

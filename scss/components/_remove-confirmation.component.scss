@@ -1,0 +1,29 @@
+.confirmation_container{
+    background-color: $color-light;
+    height: 191px;
+    width: 376px;
+    border-radius: 24px 24px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.confirmation_buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+#remove_question{
+    font-family: $font-secondary;
+    font-size: 18px;
+}
+#remove_question_text{
+    font-family: $font-secondary;
+    justify-content: center;
+    margin-left: 40px;
+    color: $color-dark-gray;
+}
+

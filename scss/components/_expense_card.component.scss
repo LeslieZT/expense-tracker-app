@@ -1,0 +1,40 @@
+@use '../shared/variables';
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 2rem 1rem;
+    border-radius: 1.25rem;
+    border: 2px solid variables.$color-gray-light;
+
+    &__details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    &__summary{
+      text-align: right;
+
+      &-amount {
+        font-size: variables.$fs-xx-large;
+      }
+
+      &-time {
+        font-size: variables.$fs-xx-small;
+      }
+    }
+
+  
+    &__icon {
+      font-size: 2rem;
+      color: red;
+      background-color: lighten(red, 45%);
+      padding: 1rem;
+      border-radius: 1rem;
+    }  
+    
+  }

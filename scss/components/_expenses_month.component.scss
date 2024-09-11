@@ -1,0 +1,29 @@
+@use '../shared/variables';
+
+.expenses-month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1000px;
+    padding: 1rem 2rem;
+    width: 80%;
+    background-color: variables.$color-light;
+    position: absolute;  
+    top: 10rem;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+  .month-selector__button {
+    background: none;
+    border: none;
+    color: variables.$text-color-dark;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .month-selector__label {
+    font-size: variables.$fs-large;
+    font-weight: bold;
+    color: variables.$text-color-dark;
+  }

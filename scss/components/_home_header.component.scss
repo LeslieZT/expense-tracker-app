@@ -1,0 +1,30 @@
+@use '../shared/variables' as variables;
+
+.homepage__header {
+    background-color: variables.$color-primary;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    height: 19rem;
+    background: linear-gradient(to bottom, variables.$color-primary, variables.$color-secondary);
+}
+
+.header {
+  &__greeting {
+    color: variables.$text-color-light;
+    margin-bottom: 0.5rem;    
+  }
+  
+  &__user-name {
+    font-size: variables.$fs-large;
+    font-weight: bold;
+    color: variables.$text-color-light;    
+  }
+
+  &__settings i {
+    font-size: variables.$fs-icon-small;
+    color: variables.$text-color-light;
+  }
+
+}
+

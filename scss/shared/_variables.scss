@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* Colors */
 $color-primary: #559BE6;
@@ -27,4 +27,11 @@ $fs-xx-large: 24px;
 
  /* size icons */
  
-$fs-icon-small: 24px
+$fs-icon-small: 24px;
+$color-dark-gray: #666666;
+
+/* Fonts */
+$font-principal: Nunito;
+$font-secondary: Inter;
+$regular-size: 16px;
+$description-size: 13px;

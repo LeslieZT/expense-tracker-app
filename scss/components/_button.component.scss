@@ -1,0 +1,39 @@
+.btn-submit {
+    padding: 10px 20px 10px 20px;
+    gap: 10px;
+    border-radius: 20px;
+    border:none;
+    width: 318px;
+    height: 64px;
+    margin-bottom: 24px;
+    background-image: linear-gradient(
+      to bottom,
+      $color-primary,
+      $color-secondary
+    );
+    font-family: $font-secondary;
+    font-size: 18px;
+    font-weight: 600;
+    color: $color-light;
+    line-height: 38px;
+    cursor: pointer;
+    }
+
+    .confirmation_button{
+      height: 56px;
+      width: 164px;
+      background-color: $color-primary;
+      opacity: 50%;
+      color: $color-light;
+      font-size: 18px;
+      border: none;
+      border-radius: 16px;
+      gap: 10px;
+      padding:8px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .confirmation_button:hover{
+      opacity: 100%;
+    }

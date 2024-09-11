@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/* Colors */
+/* Font style */
+/* Text Color */
+/* Font size */
+/* size icons */
+/* Fonts */
+body {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.homepage__header {
+  background-color: #559BE6;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  height: 19rem;
+  background: linear-gradient(to bottom, #559BE6, #94C3F6);
+}
+
+.header__greeting {
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+.header__user-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.header__settings i {
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.expenses-month {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1000px;
+  padding: 1rem 2rem;
+  width: 80%;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.month-selector__button {
+  background: none;
+  border: none;
+  color: #0A0A0C;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.month-selector__label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0A0A0C;
+}
+
+.expenses-total {
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #559BE6;
+  padding: 2rem 0;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 16px;
+  position: relative;
+  top: 1rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.expenses-total__title {
+  font-size: 20px;
+  font-weight: 500;
+}
+.expenses-total__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.expenses-total__content-icon {
+  font-size: 28px;
+}
+.expenses-total__content-amount {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem 1rem;
+  border-radius: 1.25rem;
+  border: 2px solid #91919F;
+}
+.expense-item__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.expense-item__summary {
+  text-align: right;
+}
+.expense-item__summary-amount {
+  font-size: 24px;
+}
+.expense-item__summary-time {
+  font-size: 10px;
+}
+.expense-item__icon {
+  font-size: 2rem;
+  color: red;
+  background-color: #ffe6e6;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.homepage {
+  margin: 0 auto;
+}
+
+/* Colors */
+/* Font style */
+/* Text Color */
+/* Font size */
+/* size icons */
+/* Fonts */
+.expense-page {
+  background-image: linear-gradient(to bottom, #559BE6, #94C3F6);
+  background-attachment: fixed;
+  font-family: Nunito;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav_icons {
+  fill: #FFFFFF;
+  height: 28px;
+  width: 28px;
+  margin-top: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.back_icon {
+  left: 24px;
+}
+
+h2 {
+  font-family: Inter;
+  font-weight: 800;
+  font-size: 24px;
+  align-self: center;
+  color: #FFFFFF;
+}
+
+.options_icon {
+  right: 24px;
+}
+
+.add_expense_form {
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 28px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.add_expense_form_options {
+  align-self: center;
+  font-family: Inter;
+  font-size: 12 px;
+  font-weight: 500;
+  color: #666666;
+}
+
+#category_select {
+  border: solid 1px #888888;
+  border-radius: 8px;
+  height: 50px;
+  width: 318px;
+  color: #666666;
+  padding: 10px;
+}
+
+#amount {
+  border: solid 1px #888888;
+  border-radius: 8px;
+  height: 50px;
+  width: 318px;
+  color: #666666;
+}
+
+#date {
+  border: solid 1px #888888;
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 50px;
+  width: 300px;
+  color: #666666;
+}
+
+#description {
+  border: solid 1px #888888;
+  border-radius: 8px;
+  height: 118px;
+  width: 318px;
+  color: #666666;
+}
+
+.clear_option button {
+  position: relative;
+  padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  right: 15%;
+  top: -10px;
+  color: #559BE6;
+}
+
+.manage_icons {
+  fill: #666666;
+  height: 21px;
+  width: 21px;
+  top: 120px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.edit_icon {
+  right: 90px;
+}
+
+.delete_icon {
+  right: 55px;
+}
+
+.btn-submit {
+  padding: 10px 20px 10px 20px;
+  gap: 10px;
+  border-radius: 20px;
+  border: none;
+  width: 318px;
+  height: 64px;
+  margin-bottom: 24px;
+  background-image: linear-gradient(to bottom, #559BE6, #94C3F6);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 38px;
+  cursor: pointer;
+}
+
+.confirmation_button {
+  height: 56px;
+  width: 164px;
+  background-color: #559BE6;
+  opacity: 50%;
+  color: #FFFFFF;
+  font-size: 18px;
+  border: none;
+  border-radius: 16px;
+  gap: 10px;
+  padding: 8px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.confirmation_button:hover {
+  opacity: 100%;
+}
+
+.confirmation_container {
+  background-color: #FFFFFF;
+  height: 191px;
+  width: 376px;
+  border-radius: 24px 24px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.confirmation_buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+#remove_question {
+  font-family: Inter;
+  font-size: 18px;
+}
+
+#remove_question_text {
+  font-family: Inter;
+  justify-content: center;
+  margin-left: 40px;
+  color: #666666;
+}/*# sourceMappingURL=main.css.map */

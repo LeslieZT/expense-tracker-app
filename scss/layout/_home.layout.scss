@@ -3,6 +3,7 @@
 @use '../components/expenses_month.component';
 @use '../components/expenses_total.component';
 @use '../components/expense_card.component';
+@use '../components/expense_history.component';
 
 .homepage {
     margin: 0 auto;

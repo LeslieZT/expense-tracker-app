@@ -7,14 +7,56 @@ $color-secondary: #94C3F6;
 $color-light:#FFFFFF;
 $color-gray : #888888;
 $color-gray-light:#91919F;
+$color-dark-gray: #666666;
 
-/* Font style */ 
-$font-family: "Nunito", sans-serif;
+/* Icon Colors */
+$color-red: #F44336;
+$color-crimson: #DC143C;       
+$color-light-coral: #F08080;       
+$color-salmon: #FA8072;  
+$color-pink: #E91E63;
+$color-purple: #9C27B0;
+$color-deep-purple: #673AB7;
+$color-turquoise: #40E0D0;     
+$color-medium-turquoise: #48D1CC;    
+$color-light-sea-green: #20B2AA;   
+$color-royal-blue: #4169E1;     
+$color-steel-blue: #4682B4;     
+$color-cornflower-blue: #6495ED;     
+$color-midnight-blue: #191970;     
+$color-indigo: #3F51B5;
+$color-blue: #2196F3;
+$color-light-blue: #03A9F4;
+$color-cyan: #00BCD4;
+$color-teal: #009688;
+$color-green: #4CAF50;
+$color-light-green: #8BC34A;
+$color-lime: #CDDC39;
+$color-yellow: #FFEB3B;
+$color-amber: #FFC107;
+$color-orange: #e18109;
+$color-orange-light: #FF9800;
+$color-deep-orange: #FF5722;
+$color-sienna: #A0522D;   
+$color-brown: #795548;
+$color-gray: #9E9E9E;
+$color-dim-gray: #696969;    
+$color-blue-gray: #607D8B;
+$color-black: #000000;
+$color-chocolate: #D2691E;  
 
 /* Text Color */
 $text-color-dark: #0A0A0C;
 $text-color-light:#FFFFFF;
+$text-color-red: #FD3C4A;
 
+/* Font style */ 
+$font-family: "Nunito", sans-serif;
+/* Fonts */
+$font-principal: Nunito;
+$font-secondary: Inter;
+$regular-size: 16px;
+$description-size: 13px;
 
 /* Font size */
 $fs-xx-small: 10px;
@@ -25,13 +67,8 @@ $fs-large: 18px;
 $fs-x-large: 20px;
 $fs-xx-large: 24px;
 
- /* size icons */
- 
+ /* size icons */ 
 $fs-icon-small: 24px;
-$color-dark-gray: #666666;
 
-/* Fonts */
-$font-principal: Nunito;
-$font-secondary: Inter;
-$regular-size: 16px;
-$description-size: 13px;
+
+

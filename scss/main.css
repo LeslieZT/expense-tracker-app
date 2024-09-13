@@ -3,11 +3,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 /* Colors */
-/* Font style */
+/* Icon Colors */
 /* Text Color */
+/* Font style */
+/* Fonts */
 /* Font size */
 /* size icons */
-/* Fonts */
 body {
   font-family: "Nunito", sans-serif;
   margin: 0;
@@ -34,7 +35,7 @@ html {
   padding: 3rem 2rem;
   display: flex;
   justify-content: space-between;
-  height: 19rem;
+  height: 16rem;
   background: linear-gradient(to bottom, #559BE6, #94C3F6);
 }
 
@@ -91,9 +92,9 @@ html {
   gap: 1rem;
   border-radius: 16px;
   position: relative;
-  top: 1rem;
+  top: 0.5rem;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -30%);
 }
 .expenses-total__title {
   font-size: 20px;
@@ -118,9 +119,12 @@ html {
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
-  padding: 2rem 1rem;
+  padding: 1rem;
   border-radius: 1.25rem;
-  border: 2px solid #91919F;
+  border: 1px solid #91919F;
+  box-shadow: 2px 2px 5px -1px #91919F;
+  -webkit-box-shadow: 2px 2px 5px -1px #91919F;
+  -moz-box-shadow: 2px 2px 5px -1px #91919F;
 }
 .expense-item__details {
   display: flex;
@@ -128,21 +132,293 @@ html {
   align-items: center;
   gap: 0.5rem;
 }
+.expense-item__info {
+  text-align: left;
+}
+.expense-item__info-category {
+  font-size: 16px;
+  font-weight: 500;
+}
+.expense-item__info-description {
+  font-size: 14px;
+}
 .expense-item__summary {
   text-align: right;
 }
 .expense-item__summary-amount {
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #FD3C4A;
 }
 .expense-item__summary-time {
   font-size: 10px;
 }
-.expense-item__icon {
-  font-size: 2rem;
-  color: red;
-  background-color: #ffe6e6;
-  padding: 1rem;
+
+.expense-item__icon--red {
   border-radius: 1rem;
+  color: #F44336;
+  background-color: #fdd8d6;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--crimson {
+  border-radius: 1rem;
+  color: #DC143C;
+  background-color: #f7a2b3;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--light-coral {
+  border-radius: 1rem;
+  color: #F08080;
+  background-color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--salmon {
+  border-radius: 1rem;
+  color: #FA8072;
+  background-color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--pink {
+  border-radius: 1rem;
+  color: #E91E63;
+  background-color: #f8b7cd;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--purple {
+  border-radius: 1rem;
+  color: #9C27B0;
+  background-color: #dc97e8;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--deep-purple {
+  border-radius: 1rem;
+  color: #673AB7;
+  background-color: #c5b3e7;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--turquoise {
+  border-radius: 1rem;
+  color: #40E0D0;
+  background-color: #d1f8f4;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--medium-turquoise {
+  border-radius: 1rem;
+  color: #48D1CC;
+  background-color: #cef3f1;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--light-sea-green {
+  border-radius: 1rem;
+  color: #8BC34A;
+  background-color: #dcedc8;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--royal-blue {
+  border-radius: 1rem;
+  color: #4169E1;
+  background-color: #d2dcf8;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--steel-blue {
+  border-radius: 1rem;
+  color: #4682B4;
+  background-color: #bdd3e5;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--cornflower-blue {
+  border-radius: 1rem;
+  color: #6495ED;
+  background-color: #fbfcff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--midnight-blue {
+  border-radius: 1rem;
+  color: #191970;
+  background-color: #5858da;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--cyan {
+  border-radius: 1rem;
+  color: #00BCD4;
+  background-color: #7df0ff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--indigo {
+  border-radius: 1rem;
+  color: #3F51B5;
+  background-color: #b7bee6;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--blue {
+  border-radius: 1rem;
+  color: #2196F3;
+  background-color: #c1e2fc;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--light-blue {
+  border-radius: 1rem;
+  color: #03A9F4;
+  background-color: #a1e1fe;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--teal {
+  border-radius: 1rem;
+  color: #009688;
+  background-color: #3fffed;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--green {
+  border-radius: 1rem;
+  color: #4CAF50;
+  background-color: #c0e4c1;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--light-green {
+  border-radius: 1rem;
+  color: #8BC34A;
+  background-color: #dcedc8;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--lime {
+  border-radius: 1rem;
+  color: #CDDC39;
+  background-color: #f1f5c8;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--yellow {
+  border-radius: 1rem;
+  color: #FFEB3B;
+  background-color: #fffce3;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--amber {
+  border-radius: 1rem;
+  color: #FFC107;
+  background-color: #ffebaf;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--orange {
+  border-radius: 1rem;
+  color: #e18109;
+  background-color: #fbcf97;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--orange-light {
+  border-radius: 1rem;
+  color: #FF9800;
+  background-color: #ffdca8;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--deep-orange {
+  border-radius: 1rem;
+  color: #FF5722;
+  background-color: #ffd7ca;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--sienna {
+  border-radius: 1rem;
+  color: #A0522D;
+  background-color: #e1ad94;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--brown {
+  border-radius: 1rem;
+  color: #795548;
+  background-color: #c8aca2;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--gray {
+  border-radius: 1rem;
+  color: #9E9E9E;
+  background-color: #f2f2f2;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--dim-gray {
+  border-radius: 1rem;
+  color: #696969;
+  background-color: #bdbdbd;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--blue-gray {
+  border-radius: 1rem;
+  color: #607D8B;
+  background-color: #c0cdd3;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--black {
+  border-radius: 1rem;
+  color: #000000;
+  background-color: #545454;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+.expense-item__icon--chocolate {
+  border-radius: 1rem;
+  color: #D2691E;
+  background-color: #f2c6a6;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.expenses__history {
+  margin: 0 1rem;
+}
+
+.expenses__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.expenses__header h3 {
+  margin: 0;
+  color: #559BE6;
+  font-size: 18px;
+}
+.expenses__header .expenses__see-all {
+  color: #9E9E9E;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.expenses__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .homepage {
@@ -150,11 +426,12 @@ html {
 }
 
 /* Colors */
-/* Font style */
+/* Icon Colors */
 /* Text Color */
+/* Font style */
+/* Fonts */
 /* Font size */
 /* size icons */
-/* Fonts */
 .expense-page {
   background-image: linear-gradient(to bottom, #559BE6, #94C3F6);
   background-attachment: fixed;
@@ -209,7 +486,7 @@ h2 {
 }
 
 #category_select {
-  border: solid 1px #888888;
+  border: solid 1px #9E9E9E;
   border-radius: 8px;
   height: 50px;
   width: 318px;
@@ -218,7 +495,7 @@ h2 {
 }
 
 #amount {
-  border: solid 1px #888888;
+  border: solid 1px #9E9E9E;
   border-radius: 8px;
   height: 50px;
   width: 318px;
@@ -226,7 +503,7 @@ h2 {
 }
 
 #date {
-  border: solid 1px #888888;
+  border: solid 1px #9E9E9E;
   border-radius: 8px;
   padding-left: 10px;
   padding-right: 10px;
@@ -236,7 +513,7 @@ h2 {
 }
 
 #description {
-  border: solid 1px #888888;
+  border: solid 1px #9E9E9E;
   border-radius: 8px;
   height: 118px;
   width: 318px;

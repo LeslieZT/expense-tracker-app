@@ -1,4 +1,8 @@
-@mixin expense-card-icon($color) {
+@mixin expense-card-icon($color, $padding, $font-size) {
+    border-radius: 1rem;
     color: $color;
-    background-color: lighten($color, 45%);
+    background-color: lighten($color, 33%);
+    font-size: $font-size;
+    padding: $padding;
+
 }

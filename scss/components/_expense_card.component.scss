@@ -1,40 +1,233 @@
-@use '../shared/variables';
+@use "../shared/variables";
+@use "../mixin/expense-card.mixin" as m;
 
 .expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  border: 1px solid variables.$color-gray-light;
+  box-shadow: 2px 2px 5px -1px variables.$color-gray-light;
+  -webkit-box-shadow: 2px 2px 5px -1px variables.$color-gray-light;
+  -moz-box-shadow: 2px 2px 5px -1px variables.$color-gray-light;
+
+  &__details {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
-    padding: 2rem 1rem;
-    border-radius: 1.25rem;
-    border: 2px solid variables.$color-gray-light;
-
-    &__details {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    &__summary{
-      text-align: right;
-
-      &-amount {
-        font-size: variables.$fs-xx-large;
-      }
-
-      &-time {
-        font-size: variables.$fs-xx-small;
-      }
-    }
-
-  
-    &__icon {
-      font-size: 2rem;
-      color: red;
-      background-color: lighten(red, 45%);
-      padding: 1rem;
-      border-radius: 1rem;
-    }  
-    
   }
+
+  &__info {
+    text-align: left;
+
+    &-category {
+      font-size: variables.$fs-medium;
+      font-weight: 500;
+    }
+
+    &-description {
+      font-size: variables.$fs-small;
+    }
+  }
+
+  &__summary {
+    text-align: right;
+
+    &-amount {
+      font-size: variables.$fs-x-large;
+      font-weight: bold;
+      color: variables.$text-color-red;
+    }
+
+    &-time {
+      font-size: variables.$fs-xx-small;
+    }
+  }
+
+  // &__icon {
+  //   font-size: 2rem;
+  //   color: red;
+  //   background-color: lighten(red, 45%);
+  //   padding: 1rem;
+  //   border-radius: 1rem;
+  // }
+}
+
+.expense-item__icon {
+  $padding: 1rem;
+  $font-size: 1.5rem;
+
+  &--red {
+    @include m.expense-card-icon(variables.$color-red, $padding, $font-size);
+  }
+  &--crimson {
+    @include m.expense-card-icon(
+      variables.$color-crimson,
+      $padding,
+      $font-size
+    );
+  }
+  &--light-coral {
+    @include m.expense-card-icon(
+      variables.$color-light-coral,
+      $padding,
+      $font-size
+    );
+  }
+  &--salmon {
+    @include m.expense-card-icon(variables.$color-salmon, $padding, $font-size);
+  }
+  &--pink {
+    @include m.expense-card-icon(variables.$color-pink, $padding, $font-size);
+  }
+  &--purple {
+    @include m.expense-card-icon(variables.$color-purple, $padding, $font-size);
+  }
+  &--deep-purple {
+    @include m.expense-card-icon(
+      variables.$color-deep-purple,
+      $padding,
+      $font-size
+    );
+  }
+  &--turquoise {
+    @include m.expense-card-icon(
+      variables.$color-turquoise,
+      $padding,
+      $font-size
+    );
+  }
+  &--medium-turquoise {
+    @include m.expense-card-icon(
+      variables.$color-medium-turquoise,
+      $padding,
+      $font-size
+    );
+  }
+  &--light-sea-green {
+    @include m.expense-card-icon(
+      variables.$color-light-green,
+      $padding,
+      $font-size
+    );
+  }
+  &--royal-blue {
+    @include m.expense-card-icon(
+      variables.$color-royal-blue,
+      $padding,
+      $font-size
+    );
+  }
+  &--steel-blue {
+    @include m.expense-card-icon(
+      variables.$color-steel-blue,
+      $padding,
+      $font-size
+    );
+  }
+  &--cornflower-blue {
+    @include m.expense-card-icon(
+      variables.$color-cornflower-blue,
+      $padding,
+      $font-size
+    );
+  }
+  &--midnight-blue {
+    @include m.expense-card-icon(
+      variables.$color-midnight-blue,
+      $padding,
+      $font-size
+    );
+  }
+  &--cyan {
+    @include m.expense-card-icon(variables.$color-cyan, $padding, $font-size);
+  }
+  &--indigo {
+    @include m.expense-card-icon(variables.$color-indigo, $padding, $font-size);
+  }
+  &--blue {
+    @include m.expense-card-icon(variables.$color-blue, $padding, $font-size);
+  }
+  &--light-blue {
+    @include m.expense-card-icon(
+      variables.$color-light-blue,
+      $padding,
+      $font-size
+    );
+  }
+  &--teal {
+    @include m.expense-card-icon(variables.$color-teal, $padding, $font-size);
+  }
+  &--green {
+    @include m.expense-card-icon(variables.$color-green, $padding, $font-size);
+  }
+  &--light-green {
+    @include m.expense-card-icon(
+      variables.$color-light-green,
+      $padding,
+      $font-size
+    );
+  }
+  &--lime {
+    @include m.expense-card-icon(variables.$color-lime, $padding, $font-size);
+  }
+  &--yellow {
+    @include m.expense-card-icon(variables.$color-yellow, $padding, $font-size);
+  }
+  &--amber {
+    @include m.expense-card-icon(variables.$color-amber, $padding, $font-size);
+  }
+  &--orange {
+    @include m.expense-card-icon(variables.$color-orange, $padding, $font-size);
+  }
+  &--orange-light {
+    @include m.expense-card-icon(
+      variables.$color-orange-light,
+      $padding,
+      $font-size
+    );
+  }
+  &--deep-orange {
+    @include m.expense-card-icon(
+      variables.$color-deep-orange,
+      $padding,
+      $font-size
+    );
+  }
+  &--sienna {
+    @include m.expense-card-icon(variables.$color-sienna, $padding, $font-size);
+  }
+  &--brown {
+    @include m.expense-card-icon(variables.$color-brown, $padding, $font-size);
+  }
+  &--gray {
+    @include m.expense-card-icon(variables.$color-gray, $padding, $font-size);
+  }
+  &--dim-gray {
+    @include m.expense-card-icon(
+      variables.$color-dim-gray,
+      $padding,
+      $font-size
+    );
+  }
+  &--blue-gray {
+    @include m.expense-card-icon(
+      variables.$color-blue-gray,
+      $padding,
+      $font-size
+    );
+  }
+  &--black {
+    @include m.expense-card-icon(variables.$color-black, $padding, $font-size);
+  }
+  &--chocolate {
+    @include m.expense-card-icon(
+      variables.$color-chocolate,
+      $padding,
+      $font-size
+    );
+  }
+}

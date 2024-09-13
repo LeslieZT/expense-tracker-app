@@ -23,7 +23,7 @@ export const addExpense = () => {
     categoryValue,
     amountValue,
     dateValue,
-    descriptionValue
+    descriptionValue,
   );
 
   let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
@@ -39,9 +39,9 @@ submitbutton.addEventListener("click", (event) => {
   });
 
 clearAmountButton.addEventListener("click", (event)=>{
-    amountValue = "";
+    amount = "";
 });
 
 clearDescriptionButton.addEventListener("click", (event)=>{
-    descriptionValue = "";
+    description = "";
 })

@@ -4,6 +4,10 @@ class AddCategoryView {
     view.innerHTML = "<h1>Add Category</h1>";
     return view;
   }
+
+  afterRender(){
+    
+  } 
 }
 
 export const addCategoryView = new AddCategoryView()

@@ -4,3 +4,5 @@ import { initRouter } from "./route.js";
 
 loadData()
 window.addEventListener("load", initRouter)
+
+

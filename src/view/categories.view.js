@@ -5,6 +5,8 @@ class CategoriesView  {
     return view;
   }
 
+  afterRender(){}
+
 };
 
 export const categoriesView = new CategoriesView()

@@ -11,11 +11,10 @@ class ExpensesView {
   render() {
     const expenses = this.expenseController.getExpenses();
     const categories = this.categoryController.getCategories();
-
     const view = document.createElement("div");
     let expensesContent = "";
     expenses.forEach((expense) => {
-      let category = categories[expense.category];
+      const category = categories[expense.category];
       expensesContent += ExpenseCard.render(expense, category);
     });
     const viewContent = `
@@ -33,6 +32,10 @@ class ExpensesView {
     `;
     view.innerHTML = viewContent;
     return view;
+  }
+
+  afterRender(){
+
   }
 }
 

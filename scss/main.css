@@ -629,4 +629,27 @@ h2 {
   justify-content: center;
   margin-left: 40px;
   color: #666666;
+}
+
+.icon-selector {
+  border: solid 1px #666666;
+  border-radius: 8px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  height: 200px;
+  width: 318px;
+  color: #666666;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, auto);
+  align-items: center;
+}
+
+.icon-option {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }/*# sourceMappingURL=main.css.map */

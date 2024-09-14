@@ -12,7 +12,7 @@ const routes = {
   "#/home": homeView,
   "#/expenses": expensesView,
   "#/add-expense": addExpenseView,
-  "#/expense-detail": expenseDetailView,
+  "#/expense-detail/:id": expenseDetailView,
   "#/categories": categoriesView,
   "#/add-category": addCategoryView,
 };

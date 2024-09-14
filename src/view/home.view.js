@@ -1,6 +1,7 @@
 import { categoryController } from "../controller/category.controller.js";
 import { expenseController } from "../controller/expense.controller.js";
-import { ExpenseCard } from "./expense-card.view.js";
+import { ButtonComponent } from "./button.js";
+import { ExpenseComponent } from "./expense.js";
 
 class HomeView {
   constructor(expenseController, categoryController) {
@@ -9,78 +10,60 @@ class HomeView {
   }
 
   render() {
+    const expenses = this.expenseController.getExpenses();
+    const categories = this.categoryController.getCategories();
+
     const view = document.createElement("div");
     view.classList.add("homepage");
-    let viewContent = `  
-    <header class="homepage__header">
+
+    const homepageHeaderDiv = document.createElement("header");
+    homepageHeaderDiv.classList.add("homepage__header");
+    homepageHeaderDiv.innerHTML = `  
       <div class="header__info">
         <p class="header__greeting">Welcome</p>
         <p class="header__user-name">Enjelin Morgeana</p>
       </div>
       <div class="header__settings">
         <i class="fas fa-sliders-h"></i>
-      </div>
-    </header>
-    <div class="expenses-month">
-        <button class="month-selector__button">
+      </div> 
+    `;
+
+    const expenseMonthDiv = document.createElement("div");
+    expenseMonthDiv.classList.add("expenses-month")
+    expenseMonthDiv.innerHTML = ` 
+    <button class="month-selector__button">
           <i class="fas fa-chevron-left"></i>
         </button>
         <p class="month-selector__label">March 2022</p>
         <button class="month-selector__button">
           <i class="fas fa-chevron-right"></i>
         </button>
-      </div> 
     `;
-    viewContent += this.renderExpenseTotal();
-    viewContent += this.renderListExpeses()
-    viewContent +=  `
-    <a href="#/add-expense" class="button-add-expense">
-      <i class="fas fa-plus"></i>
-    </a> 
-    `
-    view.innerHTML = viewContent;
+    view.appendChild(homepageHeaderDiv);
+    view.appendChild(expenseMonthDiv);
+    view.appendChild(this.renderExpenseTotal());
+    view.appendChild(ExpenseComponent.renderExpesesList(expenses, categories));
+    view.appendChild(ButtonComponent.addExpense());
     return view;
   }
 
   renderExpenseTotal() {
     const totalExpenses = this.expenseController.getTotalExpenses();
-    const view = `
-    <div class="expenses-total">
+    const expenseTotalDiv = document.createElement("div");
+    expenseTotalDiv.classList.add("expenses-total");
+    expenseTotalDiv.innerHTML = `   
       <p class="expenses-total__title">Total Expenses</p>
       <div class="expenses-total__content">
         <i class="expenses-total__content-icon fas fa-shopping-cart"></i>
         <p class="expenses-total__content-amount">$${totalExpenses}.00</p>
-      </div>
-    </div>    
+      </div>    
     `;
-    return view
+    return expenseTotalDiv;
   }
 
-  renderListExpeses() {
-    const expenses = this.expenseController.getExpenses();
-    const categories = this.categoryController.getCategories();
-    let expensesContent = ''
-    expenses.forEach((expense) => {  
-        let category = categories[expense.category]      
-        expensesContent += ExpenseCard.render(expense, category);
-    });
-    const view = `
-    <div class="expenses__history">
-        <div class="expenses__header">
-          <h3>Expenses History</h3>
-          <a href="#/expenses" class="expenses__see-all">See all</a>
-        </div>
-        <div class="expenses__list">
-          ${expensesContent}
-        </div>
-    </div>    
-    `
-    return view
-  } 
+  
 
-  afterRender(){
-  }
-
+  afterRender() {}
 }
 
 export const homeView = new HomeView(expenseController, categoryController);

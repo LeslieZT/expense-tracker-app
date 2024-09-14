@@ -16,13 +16,13 @@ class ExpenseController {
     this.expenses = this.storage.getItem("expenses") || [];
     return this.expenses;
   }
-  createCategory(data) {
+  createExpense(data) {
     this.expenses.push(data);
     this.storage.setItem("expenses", this.expenses);
   }
 
-  udpateCategory(id, data) {
-    this.categories = this.categories.map((ele) => {
+  udpateExpense(id, data) {
+    this.expensess = this.expensess.map((ele) => {
         if(ele.id === id) {
             return data
         }
@@ -31,9 +31,9 @@ class ExpenseController {
     this.storage.setItem("expenses", this.expenses);
   }
 
-  deleteCategory(id) {
+  deleteExpense(id) {
     this.expenses = this.expenses.filter( (ele) => ele.id !== id  )
-    this.storage.setItem(this.expenses);
+    this.storage.setItem("expenses", this.expenses);
   }
 
   findOne(id) {

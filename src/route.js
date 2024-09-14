@@ -26,7 +26,7 @@ export const router = (path) => {
 
 export const changeView = (hash) => {
   if (hash === "#/" || hash === "" || hash === "#") {
-    return router("#/welcome");
+    return router("#/home");
   }
   return router(hash);
 };

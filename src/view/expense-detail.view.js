@@ -4,5 +4,9 @@ class ExpenseDetailView {
     view.innerHTML = "<h1>Expense Detail</h1>";
     return view;
   }
+
+  afterRender(){
+    
+  }
 };
 export const expenseDetailView = new ExpenseDetailView()

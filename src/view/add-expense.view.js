@@ -1,5 +1,22 @@
+import { categoryController } from "../controller/category.controller.js";
+import { expenseController } from "../controller/expense.controller.js";
+import { Expense } from "../model/expense.model.js";
+import { changeView } from "../route.js"
+
 class AddExpenseView {
+  constructor(expenseController, categoryController) {
+    this.expenseController = expenseController;
+    this.categoryController = categoryController;
+  }
+
   render() {
+    const categories = this.categoryController.getCategories();
+    const listCategories = Object.values(categories);
+    let selectOptions = "";
+    listCategories.forEach((category) => {
+      selectOptions += `<option value="${category.id}">${category.name}</option>`;
+    });
+
     const view = document.createElement("div");
     view.innerHTML = `<main class="expense-page">
       <svg
@@ -18,16 +35,12 @@ class AddExpenseView {
       />
     </svg>
     <div class="add_expense_form">
-      <form>
+      <form id="form-add-expense">
         <div class="add_expense_form_options">
           <p>CATEGORY</p>
           <select id="category_select">
-            <option value="food">Food</option>
-            <option value="house">House</option>
-            <option value="shopping">Shopping</option>
-            <option value="services">Services</option>
-            <option value="transportation">Transportation</option>
-            <option value="miscellaneous">Miscellaneous</option>
+            <option value=""> - Select a category - </option>
+            ${selectOptions}
           </select>
         </div>
         <div class="add_expense_form_options clear_option">
@@ -71,9 +84,41 @@ class AddExpenseView {
       </form>
     </div>
     </main>`;
+
     return view;
+  }
+
+  afterRender() {
+    const form = document.getElementById("form-add-expense");
+    const category = document.getElementById("category_select");
+    const amount = document.getElementById("amount");
+    const date = document.getElementById("date");
+    const description = document.getElementById("description");
+    const submitbutton = document.querySelector(".btn-submit");
+    const clearAmountButton = document.getElementById("clearAmount");
+    const clearDescriptionButton = document.getElementById("clearDescription");
+
+    submitbutton.addEventListener("click", (event) => {
+      event.preventDefault();
+      let categoryValue = category.value;
+      let amountValue = parseFloat(amount.value);
+      let dateValue = new Date(date.value);
+      let descriptionValue = description.value;
+      const newExpense = new Expense({
+        amount: amountValue,
+        description: descriptionValue,
+        date: dateValue,
+        category: categoryValue,
+      });
+      this.expenseController.createExpense(newExpense);  
+      form.reset();
+      window.location.hash = '#/expenses';   
+      changeView('#/expenses')  
+    });    
   }
 }
 
-
-export const addExpenseView = new AddExpenseView()
+export const addExpenseView = new AddExpenseView(
+  expenseController,
+  categoryController
+);

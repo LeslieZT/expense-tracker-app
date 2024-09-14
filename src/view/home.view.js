@@ -76,7 +76,10 @@ class HomeView {
     </div>    
     `
     return view
-  }  
+  } 
+
+  afterRender(){
+  }
 
 }
 

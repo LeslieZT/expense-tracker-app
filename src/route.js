@@ -22,6 +22,7 @@ export const router = (path) => {
   root.innerHTML = "";
   const renderView = routes[path] || errorView;
   root.appendChild(renderView.render());
+  renderView.afterRender()
 };
 
 export const changeView = (hash) => {

@@ -401,7 +401,6 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
 }
 .expenses__header h3 {
   margin: 0;
@@ -416,9 +415,10 @@ html {
 }
 
 .expenses__list {
+  margin: 1rem 0.5rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.7rem;
 }
 
 .homepage {
@@ -581,6 +581,24 @@ h2 {
 
 .confirmation_button:hover {
   opacity: 100%;
+}
+
+.button-add-expense {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  color: #FFFFFF;
+  background-color: #559BE6;
+  font-size: 25px;
+  position: fixed;
+  bottom: 40px;
+  right: 15px;
+  cursor: pointer;
 }
 
 .confirmation_container {

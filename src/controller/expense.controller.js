@@ -16,8 +16,11 @@ class ExpenseController {
     this.expenses = this.storage.getItem("expenses") || [];
     return this.expenses;
   }
+
   createExpense(data) {
     this.expenses.push(data);
+    console.log(this.expenses)
+
     this.storage.setItem("expenses", this.expenses);
   }
 

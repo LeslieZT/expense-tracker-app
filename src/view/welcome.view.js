@@ -4,6 +4,10 @@ class WelcomeView {
         view.innerHTML = "<h1>Bienvenido</h1>";
         return view;
     }
+
+    afterRender(){
+    
+    }
 };
 
 export const welcomeView = new WelcomeView()

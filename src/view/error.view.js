@@ -12,6 +12,10 @@ class ErrorView {
     div.innerHTML = content;
     return div;
   }
+
+  afterRender(){
+    
+  } 
 }
 
 export const errorView = new ErrorView();

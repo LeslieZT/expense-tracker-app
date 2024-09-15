@@ -1,10 +1,11 @@
-import { formatCustomDate } from "../utils/util-date.js";
+import { formatCustomDate } from "../../utils/util-date.js";
 
 export class ExpenseComponent {
   
   static renderExpenseCard(expense, category) {
     const card = document.createElement("div");
     card.classList.add("expense-item");
+    card.setAttribute("data-id", expense.id)
     card.innerHTML = `
         <div class="expense-item__details">
           <i class="${category.icon} expense-item__icon--${category.color}"></i>
@@ -20,28 +21,21 @@ export class ExpenseComponent {
           )}</p>
         </div>
     `;
+
+    card.addEventListener("click", () => {
+      window.location.hash = `#/expenses/${expense.id}` ;   
+    })
     return card;
   }
 
   static renderExpesesList(expenses, categories ) {
-    const expensesHistoryDiv = document.createElement("div");
-    expensesHistoryDiv.classList.add("expenses__history");
-    expensesHistoryDiv.innerHTML = `
-    <div class="expenses__header">
-        <h3>Expenses History</h3>
-        <a href="#/expenses" class="expenses__see-all">See all</a>
-    </div>
-    `;
-
     const expensesListDiv = document.createElement("div");
     expensesListDiv.classList.add("expenses__list");
     expenses.forEach((expense) => {
       let category = categories[expense.category];
-      expensesListDiv.appendChild(this.renderExpenseCard(expense, category));
-    });
-    expensesHistoryDiv.appendChild(expensesListDiv);
-    return expensesHistoryDiv;
+      let card = this.renderExpenseCard(expense, category)
+      expensesListDiv.appendChild(card);
+    });    
+    return expensesListDiv;
   }
-
-
 }

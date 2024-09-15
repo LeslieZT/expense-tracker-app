@@ -12,7 +12,6 @@ const routes = {
   "#/home": homeView,
   "#/expenses": expensesView,
   "#/add-expense": addExpenseView,
-  "#/expense-detail/:id": expenseDetailView,
   "#/categories": categoriesView,
   "#/add-category": addCategoryView,
 };
@@ -20,9 +19,19 @@ const routes = {
 export const router = (path) => {
   const root = document.getElementById("root");
   root.innerHTML = "";
-  const renderView = routes[path] || errorView;
-  root.appendChild(renderView.render());
+  const match = path.match(/^#\/expenses\/([a-fA-F0-9\-]{36})$/)
+  let view;
+  let renderView
+  if(match) {
+    renderView = expenseDetailView
+    view = renderView.render(match[1])
+  } else {
+    renderView = routes[path] || errorView;
+    view = renderView.render()
+  } 
+  root.appendChild(view);
   renderView.afterRender()
+  
 };
 
 export const changeView = (hash) => {

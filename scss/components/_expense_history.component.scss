@@ -1,13 +1,14 @@
 @use "../shared/variables";
 
 .expenses__history {
-  margin: 0 1rem;
+  margin: 0rem 1.5rem;
 }
 
 .expenses__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
 
   h3 {
     margin: 0;
@@ -23,8 +24,7 @@
   }
 }
 
-.expenses__list {
-  margin: 1rem 0.5rem;
+.expenses__list {  
   display: flex;
   flex-direction: column;
   gap: 0.7rem;

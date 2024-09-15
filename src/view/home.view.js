@@ -1,7 +1,7 @@
 import { categoryController } from "../controller/category.controller.js";
 import { expenseController } from "../controller/expense.controller.js";
-import { ButtonComponent } from "./button.js";
-import { ExpenseComponent } from "./expense.js";
+import { ButtonComponent } from "./components/button.js";
+import { ExpenseComponent } from "./components/expense.js";
 
 class HomeView {
   constructor(expenseController, categoryController) {
@@ -39,10 +39,21 @@ class HomeView {
           <i class="fas fa-chevron-right"></i>
         </button>
     `;
+
+    const expensesHistoryDiv = document.createElement("div");
+    expensesHistoryDiv.classList.add("expenses__history");
+    expensesHistoryDiv.innerHTML = `
+    <div class="expenses__header">
+        <h3>Expenses History</h3>
+        <a href="#/expenses" class="expenses__see-all">See all</a>
+    </div>
+    `;
+    expensesHistoryDiv.appendChild(ExpenseComponent.renderExpesesList(expenses, categories));
+
     view.appendChild(homepageHeaderDiv);
     view.appendChild(expenseMonthDiv);
     view.appendChild(this.renderExpenseTotal());
-    view.appendChild(ExpenseComponent.renderExpesesList(expenses, categories));
+    view.appendChild(expensesHistoryDiv);
     view.appendChild(ButtonComponent.addExpense());
     return view;
   }

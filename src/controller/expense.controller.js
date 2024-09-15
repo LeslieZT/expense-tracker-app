@@ -19,14 +19,12 @@ class ExpenseController {
 
   createExpense(data) {
     this.expenses.push(data);
-    console.log(this.expenses)
-
     this.storage.setItem("expenses", this.expenses);
   }
 
-  udpateExpense(id, data) {
-    this.expensess = this.expensess.map((ele) => {
-        if(ele.id === id) {
+  updateExpense(data) {
+    this.expenses = this.expenses.map((ele) => {
+        if(ele.id === data.id) {
             return data
         }
         return ele
@@ -40,7 +38,9 @@ class ExpenseController {
   }
 
   findOne(id) {
-    return this.expenses.find((ele) => ele.id === id);
+    console.log(this.expenses, id)
+    const expense = this.expenses.find((ele) => ele.id === id);
+    return expense
   }
 
   getTotalExpenses() {

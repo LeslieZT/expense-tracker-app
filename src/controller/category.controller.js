@@ -1,3 +1,4 @@
+import { CATEGORIES } from "../data/categories.js";
 import { LocalStorageManager } from "../storage/localStorage.js";
 
 class CategoryController {
@@ -5,7 +6,12 @@ class CategoryController {
 
   constructor(storageManager) {
     this.storage = storageManager;
-    this.findAll()
+    this.load()
+  }
+
+  load() {
+    this.storage.setItem("categories", CATEGORIES)
+    this.categories = CATEGORIES
   }
 
   getCategories() {

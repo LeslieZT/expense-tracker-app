@@ -1,0 +1,49 @@
+@use "../shared/variables" as variables;
+
+.date-selector__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.date-selector {
+  display: flex;
+  flex-direction: column;
+  background-color: variables.$color-light-medium;
+  border-radius: 16px;
+  margin: 0 1rem 1.5rem 1rem;
+  padding: 15px 5px;
+  gap: 10px;
+
+  &__range {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+
+    &-input {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      label {
+        font-weight: bold;
+        font-size: variables.$fs-small;
+        color: variables.$color-dark-gray;
+      }
+
+      input[type="date"] {
+        border: 1px solid #666666;
+        color: #666666;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: variables.$fs-small;
+        cursor: pointer;
+        height: 2rem;
+      }
+
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+      }
+    }
+  }
+}

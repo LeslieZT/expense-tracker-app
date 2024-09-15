@@ -1,11 +1,13 @@
+@use "../shared/variables" as variables;
+
 .icon-selector{
-    border: solid 1px $color-dark-gray;
+    border: solid 1px variables.$color-dark-gray;
     border-radius: 8px;
     margin-top: 28px;
     margin-bottom: 28px;
     height: 200px;
     width: 318px;
-    color: $color-dark-gray;
+    color: variables.$color-dark-gray;
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);

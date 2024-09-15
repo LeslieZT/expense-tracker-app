@@ -9,6 +9,17 @@
 /* Fonts */
 /* Font size */
 /* size icons */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/* Colors */
+/* Icon Colors */
+/* Text Color */
+/* Font style */
+/* Fonts */
+/* Font size */
+/* size icons */
 body {
   font-family: "Nunito", sans-serif;
   margin: 0;
@@ -16,6 +27,7 @@ body {
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+  box-sizing: border-box;
 }
 
 html {
@@ -50,6 +62,24 @@ html {
 }
 .header__settings i {
   font-size: 24px;
+  color: #FFFFFF;
+}
+
+.secondary-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #559BE6;
+  padding: 3rem 2rem;
+  height: 12rem;
+  background: linear-gradient(to bottom, #559BE6, #94C3F6);
+}
+.secondary-header__back, .secondary-header__settings i {
+  font-size: 24px;
+  color: #FFFFFF;
+}
+.secondary-header__section-title {
+  font-size: 24px;
+  font-weight: bold;
   color: #FFFFFF;
 }
 
@@ -394,13 +424,14 @@ html {
 }
 
 .expenses__history {
-  margin: 0 1rem;
+  margin: 0rem 1.5rem;
 }
 
 .expenses__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1rem;
 }
 .expenses__header h3 {
   margin: 0;
@@ -415,7 +446,6 @@ html {
 }
 
 .expenses__list {
-  margin: 1rem 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
@@ -425,162 +455,151 @@ html {
   margin: 0 auto;
 }
 
-/* Colors */
-/* Icon Colors */
-/* Text Color */
-/* Font style */
-/* Fonts */
-/* Font size */
-/* size icons */
-.expense-page {
-  background-image: linear-gradient(to bottom, #559BE6, #94C3F6);
-  background-attachment: fixed;
-  font-family: Nunito;
-  font-size: 16px;
+.form-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
 }
 
-.nav_icons {
-  fill: #FFFFFF;
-  height: 28px;
-  width: 28px;
-  margin-top: 20px;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+.form-group label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #666666;
+}
+.form-group input[type=number],
+.form-group select,
+.form-group input[type=datetime-local] {
+  border: 1px solid #666666;
+  color: #666666;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  height: 2.5rem;
+}
+.form-group input[type=date]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+.form-group textarea {
+  border: 1px solid #666666;
+  color: #666666;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: text;
+  height: 6rem;
+  width: 100%;
+  resize: vertical;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.input_clear_group {
+  display: flex;
+  align-items: start;
+}
+
+.btn-clear {
+  font-weight: 500;
   position: absolute;
+  right: 2.5rem;
+  background-color: transparent;
+  color: #559BE6;
+  border: none;
   cursor: pointer;
 }
 
-.back_icon {
-  left: 24px;
+#clearDescription {
+  margin-top: 5px;
 }
 
-h2 {
-  font-family: Inter;
-  font-weight: 800;
-  font-size: 24px;
-  align-self: center;
-  color: #FFFFFF;
+#clearAmount {
+  height: 2.5rem;
 }
 
-.options_icon {
-  right: 24px;
-}
-
-.add_expense_form {
-  background-color: #FFFFFF;
-  border-radius: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  margin: 28px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
-}
-
-.add_expense_form_options {
-  align-self: center;
-  font-family: Inter;
-  font-size: 12 px;
-  font-weight: 500;
-  color: #666666;
-}
-
-#category_select {
-  border: solid 1px #9E9E9E;
-  border-radius: 8px;
-  height: 50px;
-  width: 318px;
-  color: #666666;
-  padding: 10px;
-}
-
-#amount {
-  border: solid 1px #9E9E9E;
-  border-radius: 8px;
-  height: 50px;
-  width: 318px;
-  color: #666666;
-}
-
-#date {
-  border: solid 1px #9E9E9E;
-  border-radius: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 50px;
-  width: 300px;
-  color: #666666;
-}
-
-#description {
-  border: solid 1px #9E9E9E;
-  border-radius: 8px;
-  height: 118px;
-  width: 318px;
-  color: #666666;
-}
-
-.clear_option button {
-  position: relative;
-  padding: 5px 10px;
-  border: none;
-  background-color: transparent;
-  right: 15%;
-  top: -10px;
+.add-expense__title {
+  padding: 0.5rem 2rem;
   color: #559BE6;
 }
 
-.manage_icons {
-  fill: #666666;
-  height: 21px;
-  width: 21px;
-  top: 120px;
-  position: absolute;
-  cursor: pointer;
+.secondary-content {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 2.5rem 2.5rem 0 0;
+  width: 100%;
+  top: -4rem;
+  padding: 2rem 0rem;
 }
 
-.edit_icon {
-  right: 90px;
+.date-selector__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
-.delete_icon {
-  right: 55px;
-}
-
-.btn-submit {
-  padding: 10px 20px 10px 20px;
-  gap: 10px;
-  border-radius: 20px;
-  border: none;
-  width: 318px;
-  height: 64px;
-  margin-bottom: 24px;
-  background-image: linear-gradient(to bottom, #559BE6, #94C3F6);
-  font-family: Inter;
-  font-size: 18px;
-  font-weight: 600;
-  color: #FFFFFF;
-  line-height: 38px;
-  cursor: pointer;
-}
-
-.confirmation_button {
-  height: 56px;
-  width: 164px;
-  background-color: #559BE6;
-  opacity: 50%;
-  color: #FFFFFF;
-  font-size: 18px;
-  border: none;
+.date-selector {
+  display: flex;
+  flex-direction: column;
+  background-color: #F4F6F6;
   border-radius: 16px;
+  margin: 0 1rem 1.5rem 1rem;
+  padding: 15px 5px;
   gap: 10px;
-  padding: 8px;
-  margin: 5px;
+}
+.date-selector__range {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+.date-selector__range-input {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.date-selector__range-input label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #666666;
+}
+.date-selector__range-input input[type=date] {
+  border: 1px solid #666666;
+  color: #666666;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  height: 2rem;
+}
+.date-selector__range-input input[type=date]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-.confirmation_button:hover {
-  opacity: 100%;
+.expenses__actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.expenses__actions button {
+  border: none;
+  background-color: #FFFFFF;
+}
+.expenses__actions i {
+  font-size: 16px;
+  color: #666666;
+}
+
+.expense-details__actions {
+  justify-content: end;
+  margin: 0 2rem;
 }
 
 .button-add-expense {
@@ -601,6 +620,36 @@ h2 {
   cursor: pointer;
 }
 
+.btn-form {
+  font-weight: 600;
+  background-color: #559BE6;
+  color: #FFFFFF;
+  font-size: 14px;
+  height: 2.5rem;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.btn-search-date {
+  font-weight: 700;
+  background-color: #559BE6;
+  color: #FFFFFF;
+  font-size: 12px;
+  height: 2rem;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Colors */
+/* Icon Colors */
+/* Text Color */
+/* Font style */
+/* Fonts */
+/* Font size */
+/* size icons */
 .confirmation_container {
   background-color: #FFFFFF;
   height: 191px;
@@ -631,6 +680,13 @@ h2 {
   color: #666666;
 }
 
+/* Colors */
+/* Icon Colors */
+/* Text Color */
+/* Font style */
+/* Fonts */
+/* Font size */
+/* size icons */
 .icon-selector {
   border: solid 1px #666666;
   border-radius: 8px;

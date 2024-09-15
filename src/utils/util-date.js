@@ -9,8 +9,12 @@ export const formatCustomDate = (date) => {
     return `${formattedHour}:${minutes} ${period} - ${day} ${month} ${year}`;
   }
   
-//   // Ejemplo de uso
-//   const date = new Date('2024-02-22T10:00:00'); // Crear una fecha de ejemplo
-//   const formattedDate = formatCustomDate(date);
-//   console.log(formattedDate); // 10:00 AM - 22 FEB 2024
-  
+export const toDateTimeLocalString = (date) =>  {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Meses empiezan en 0
+    const day = String(date.getDate()).padStart(2, '0');
+    const hours = String(date.getHours()).padStart(2, '0');
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+
+    return `${year}-${month}-${day}T${hours}:${minutes}`;
+}

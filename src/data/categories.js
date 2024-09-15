@@ -1,6 +1,7 @@
 import { Category } from "../model/category.model.js";
 
 export const house = new Category({
+  id: "5caebe8a-9866-4d30-a848-e0f96d970e5d",
   name: "House",
   color: "deep-purple",
   icon: "fas fa-home",
@@ -8,6 +9,7 @@ export const house = new Category({
 });
 
 export const food = new Category({
+  id: "51d789f4-2de5-4458-9bee-f6d92ad72305",
   name: "Food",
   color: "orange",
   icon: "fas fa-utensils",
@@ -15,6 +17,7 @@ export const food = new Category({
 });
 
 export const services = new Category({
+  id: "380efcd4-8ea8-45a8-bd64-3a3f1463713f",
   name: "Services",
   color: "yellow",
   icon: "fas fa-tools",
@@ -22,6 +25,7 @@ export const services = new Category({
 });
 
 export const shopping = new Category({
+  id: "33391092-4e2b-4c52-a8d4-4c6b34fb4c00",
   name: "Shopping",
   color: "crimson",
   icon: "fas fa-shopping-bag",
@@ -30,6 +34,7 @@ export const shopping = new Category({
 });
 
 export const transportation = new Category({
+  id: "b5aff49f-9f2f-49c9-a01c-b530f7995c04",
   name: "Transportation",
   color: "indigo",
   icon: "fas fa-bus",
@@ -38,6 +43,7 @@ export const transportation = new Category({
 });
 
 export const miscellaneous = new Category({
+  id: "fac53037-89b6-4e84-bdda-0734b000c91a",
   name: "Miscellaneous",
   color: "green",
   icon: "fas fa-ellipsis-h",

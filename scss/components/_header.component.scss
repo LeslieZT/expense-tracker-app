@@ -7,7 +7,7 @@
     justify-content: space-between;
     height: 16rem;
     background: linear-gradient(to bottom, variables.$color-primary, variables.$color-secondary);
-}
+  }
 
 .header {
   &__greeting {
@@ -26,5 +26,24 @@
     color: variables.$text-color-light;
   }
 
+}
+
+.secondary-header{
+  display: flex;
+  justify-content: space-between;
+  background-color: variables.$color-primary;
+  padding: 3rem 2rem;  
+  height: 12rem;
+  background: linear-gradient(to bottom, variables.$color-primary, variables.$color-secondary);
+  &__back , &__settings i {
+    font-size: variables.$fs-icon-small;
+    color: variables.$text-color-light;    
+  }
+  
+  &__section-title {
+    font-size: variables.$fs-xx-large;
+    font-weight: bold;
+    color: variables.$text-color-light;    
+  }  
 }
 

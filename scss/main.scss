@@ -1,11 +1,11 @@
 @use './shared/variables';
 @use './shared/base';
-
-
 @use './layout/home.layout';
+@use "./layout/add-expense.layout";
+@use "./layout/secondary-page.layout";
+@use "./layout/expenses.layout";
 
 
-@import "./layout/create-expense.layout";
 @import "./components/button.component";
 @import "./components/remove-confirmation.component";
 @import "./components/icons.component";

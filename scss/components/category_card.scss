@@ -1,0 +1,28 @@
+.category_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  width: 353px;
+  height: 89px;
+  border: 1px solid $color-gray-light;
+  box-shadow: 2px 2px 5px -1px $color-gray-light;
+  -webkit-box-shadow: 2px 2px 5px -1px $color-gray-light;
+  -moz-box-shadow: 2px 2px 5px -1px $color-gray-light;
+}
+
+.category_card-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.category_icons {
+  border: none;
+  height: 40px;
+  width: 40px;
+  color: $color-gray-light;
+  background-color: transparent;
+}

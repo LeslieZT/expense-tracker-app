@@ -393,7 +393,7 @@ html {
   padding: 1rem;
 }
 
-.expenses__history {
+.expenses__history .category_list {
   margin: 0 1rem;
 }
 
@@ -460,6 +460,7 @@ h2 {
   font-size: 24px;
   align-self: center;
   color: #FFFFFF;
+  margin-top: 25px;
 }
 
 .options_icon {
@@ -629,4 +630,33 @@ h2 {
   justify-content: center;
   margin-left: 40px;
   color: #666666;
+}
+
+.category_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  width: 353px;
+  height: 89px;
+  border: 1px solid #91919F;
+  box-shadow: 2px 2px 5px -1px #91919F;
+  -webkit-box-shadow: 2px 2px 5px -1px #91919F;
+  -moz-box-shadow: 2px 2px 5px -1px #91919F;
+}
+
+.category_card-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.category_icons {
+  border: none;
+  height: 40px;
+  width: 40px;
+  color: #91919F;
+  background-color: transparent;
 }/*# sourceMappingURL=main.css.map */

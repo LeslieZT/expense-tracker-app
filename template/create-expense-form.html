@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expenses chart</title>
+    <link rel="stylesheet" href="../scss/main.css" />
+    <script src="https://kit.fontawesome.com/7b332efbd3.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="add-expense-page">
+      <header class="secondary-header">
+        <a href="#/expenses" class= "secondary-header__back">
+          <i class="fas fa-chevron-left"></i>
+        </a>
+        <div class="secondary-header__section">
+          <p class="secondary-header__section-title">Add Expense</p>
+        </div>
+        <div class="secondary-header__settings">
+          <i class="fas fa-sliders-h"></i>
+        </div>
+      </header>
+      <section class="secondary-content" >
+        <div class="add-expense__title">
+          <h3>Record a new expense</h3>
+        </div>
+       
+        <form class="add-expense__form form-content">   
+
+          <div class="form-group">
+            <label for="category_select">Category</label>
+            <select id="category_select" class="form-control">
+              <option value="food">Food</option>
+              <option value="house">House</option>
+              <option value="shopping">Shopping</option>
+              <option value="services">Services</option>
+              <option value="transportation">Transportation</option>
+              <option value="miscellaneous">Miscellaneous</option>
+            </select>
+          </div>
+  
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <div class="input_clear_group">
+              <input
+                type="number"
+                id="amount"
+                class="form-control"
+                placeholder="Enter amount"
+                aria-label="amount"
+              />
+              <button type="button" id="clearAmount" class="btn-clear">Clear</button>
+            </div>
+          </div>
+        
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input
+              type="datetime-local"
+              id="date"
+              class="form-control"
+              aria-label="date"
+            />
+          </div>
+        
+          <div class="form-group">
+            <label for="description">Description</label>
+            <div class="input_clear_group">
+              <textarea
+                id="description"
+                class="form-control"
+                rows="4"
+                placeholder="Enter description"
+                aria-label="description"
+              ></textarea>
+              <button type="button" id="clearDescription" class="btn-clear">Clear</button>
+            </div>
+          </div>
+        
+          <div class="form-group">
+            <button type="submit" class="btn-form" >Enviar</button>
+          </div>
+        </form>        
+      </section>
+      
+    <!-- <div class="add_expense_form">
+      <form>
+        <div class="add_expense_form_options">
+          <p>CATEGORY</p>
+          <select id="category_select">
+            <option value="food">Food</option>
+            <option value="house">House</option>
+            <option value="shopping">Shopping</option>
+            <option value="services">Services</option>
+            <option value="transportation">Transportation</option>
+            <option value="miscellaneous">Miscellaneous</option>
+          </select>
+        </div>
+        <div class="add_expense_form_options clear_option">
+          <p>AMOUNT</p>
+          <input
+            type="text"
+            id="amount"
+            class="add_expense_form_options"
+            aria-label="amount"
+            placeholder=""
+          />
+          <button id="clearAmount">
+            <span>Clear</span>
+          </button>
+        </div>
+
+        <div class="add_expense_form_options">
+          <p>DATE</p>
+          <input class="date" type="date" id="date" aria-label="date" />
+
+          <div class="add_expense_form_options clear_option">
+            <p>DESCRIPTION</p>
+            <textarea
+              name="description"
+              id="description"
+              aria-expanded="false"
+              rows="4"
+            >
+            </textarea>
+            <button id="clearDescription">
+              <span>Clear</span>
+            </button>
+          </div>
+        </div>
+        <input
+          type="submit"
+          class="btn-submit"
+          value="Save"
+          aria-label="save"
+        />
+      </form>
+    </div> -->
+    </div>
+    
+    <script type="module" src="../src/localstorage.js"></script>
+  </body>
+</html>

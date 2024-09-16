@@ -1,0 +1,71 @@
+@use "../shared/_variables.scss" as variables;
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+
+  label {
+    font-weight: bold;
+    font-size: variables.$fs-small;
+    color: variables.$color-dark-gray;
+  }
+
+  input[type="number"],
+  select,
+  input[type="datetime-local"] {
+    border: 1px solid #666666;
+    color: #666666;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: variables.$fs-small;
+    cursor: pointer;
+    height: 2.5rem;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+  }
+
+  textarea {
+    border: 1px solid #666666;
+    color: #666666;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: text;
+    height: 6rem;
+    width: 100%;
+    resize: vertical;
+  }
+}
+
+.form-control {
+  width: 100%;
+}
+
+
+.input_clear_group {
+  display: flex;
+  align-items: start;
+}
+
+.btn-clear {
+  font-weight: 500;
+  position: absolute;
+  right: 2.5rem;
+  background-color: transparent;
+  color:  variables.$color-primary;
+  border: none;
+  cursor: pointer;
+}
+

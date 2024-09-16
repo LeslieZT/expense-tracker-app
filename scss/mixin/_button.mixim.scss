@@ -1,0 +1,19 @@
+@mixin button($properties) {
+    $bg-color: map-get($properties, 'bg-color');
+    $text-color: map-get($properties, 'text-color');
+    $font-size: map-get($properties, 'font-size');
+    $width: map-get($properties, 'width');
+    $height: map-get($properties, 'height');
+    $padding: map-get($properties, 'padding');
+    $border-radius: map-get($properties, 'border-radius');
+  
+    background-color: $bg-color;
+    color: $text-color;
+    width: $width;
+    font-size: $font-size;
+    height: $height;
+    padding: $padding;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;  
+}

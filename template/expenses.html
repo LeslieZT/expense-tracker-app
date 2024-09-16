@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker App</title>
+  <link type="text/css" rel="stylesheet" href="../scss/main.css" />
+  <script src="https://kit.fontawesome.com/7b332efbd3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="expense-page">
+    <header class="secondary-header">
+      <a href="#/home" class= "secondary-header__back">
+        <i class="fas fa-chevron-left"></i>
+      </a>
+      <div class="secondary-header__section">
+        <p class="secondary-header__section-title">Expenses</p>
+      </div>
+      <div class="secondary-header__settings">
+        <i class="fas fa-sliders-h"></i>
+      </div>
+    </header>
+    <section class="secondary-content">
+      <form class="date-selector">
+        <div class="date-selector__range">
+          <div class="date-selector__range-input">
+            <label for="start-date">Start Date</label>
+            <input type="date" name="start-date" id="start-date" value="2022-02-22" />
+           </div>
+          <div class="date-selector__range-input">
+            <label for="end-date">End Date</label>
+            <input type="date" name="end-date" id="end-date" value="2022-02-22" />
+          </div>
+        </div>        
+        <div class="date-selector__button">
+          <button class="btn-search-date">Buscar</button>
+        </div>               
+      </form>
+
+      <div class="expenses__history">
+        <div class="expenses__header">
+          <h3>Expenses History</h3>
+          <div class="expenses__actions">
+            <div class="expense__actions-filters">
+              <button class="button__show" id="button_filter">
+                <i class="fa-solid fa-filter"></i>
+              </button>
+            </div>
+            <div class="expense__actions-order">
+              <button class="button__show" id="button_orderby">
+                <i class="fa-solid fa-arrow-down-z-a"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+       
+        <div class="expenses__list">
+          <div class="expense-item">
+            <div class="expense-item__details">
+              <i class="fas fa-shopping-bag expense-item__icon--red"></i>
+              <div class="expense-item__info">
+                <p class="expense-item__info-category">Shopping</p>
+                <p class="expense-item__info-description">Buy some groceries</p>
+              </div>
+            </div>
+            <div class="expense-item__summary">
+              <p class="expense-item__summary-amount">- $120</p>
+              <p class="expense-item__summary-time">10:00 AM - 22 FEB 2024</p>
+            </div>
+          </div>
+
+          <div class="expense-item expense-item">
+            <div class="expense-item__details">
+              <i class="fas fa-home expense-item__icon--deep-purple"></i>
+              <div class="expense-item__info">
+                <p class="expense-item__info-category">Shopping</p>
+                <p class="expense-item__info-description">Buy some groceries</p>
+              </div>
+            </div>
+            <div class="expense-item__summary">
+              <p class="expense-item__summary-amount">- $120</p>
+              <p class="expense-item__summary-time">10:00 AM - 22 FEB 2024</p>
+            </div>
+          </div>
+
+          <div class="expense-item expense-item--shopping">
+            <div class="expense-item__details">
+              <i class="fas fa-file-invoice expense-item__icon--blue"></i>
+              <div class="expense-item__info">
+                <p class="expense-item__info-category">Shopping</p>
+                <p class="expense-item__info-description">Buy some groceries</p>
+              </div>
+            </div>
+            <div class="expense-item__summary">
+              <p class="expense-item__summary-amount">- $120</p>
+              <p class="expense-item__summary-time">10:00 AM - 22 FEB 2024</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>      
+    </section>   
+    <button class="button-add-expense">
+      <i class="fas fa-plus"></i>
+    </button>
+  </div>
+</body>
+</html>

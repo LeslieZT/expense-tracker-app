@@ -1,0 +1,21 @@
+@use '../shared/variables' as variables;
+
+.expenses__actions {
+    display: flex;
+    gap: 0.5rem;
+    
+    button {
+        border: none;
+        background-color: variables.$color-light;
+    }
+    i {
+        font-size: variables.$fs-medium;
+        color: variables.$color-dark-gray;
+    }
+}
+
+.expense-details__actions{
+    justify-content: end;
+    margin: 0 2rem;
+}
+

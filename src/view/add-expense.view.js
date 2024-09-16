@@ -1,7 +1,7 @@
 import { categoryController } from "../controller/category.controller.js";
 import { expenseController } from "../controller/expense.controller.js";
 import { Expense } from "../model/expense.model.js";
-import { changeView } from "../route.js"
+import { changeView } from "../route.js";
 
 class AddExpenseView {
   constructor(expenseController, categoryController) {
@@ -40,6 +40,7 @@ class AddExpenseView {
           <p>CATEGORY</p>
           <select id="category_select">
             <option value=""> - Select a category - </option>
+            <option value="add-new-category">- Add new category -</option>
             ${selectOptions}
           </select>
         </div>
@@ -110,11 +111,19 @@ class AddExpenseView {
         date: dateValue,
         category: categoryValue,
       });
-      this.expenseController.createExpense(newExpense);  
+      this.expenseController.createExpense(newExpense);
       form.reset();
-      window.location.hash = '#/expenses';   
-      changeView('#/expenses')  
-    });    
+      window.location.hash = "#/expenses";
+      changeView("#/expenses");
+    });
+
+    category.addEventListener("change", (event) => {
+      if (event.target.value === "add-new-category") {
+        window.location.hash = "#/add-category";
+        changeView("#/add-category");
+      }
+    });
+
   }
 }
 
